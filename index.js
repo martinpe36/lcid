@@ -17,9 +17,9 @@ exports.to = localeId => {
 		throw new TypeError('Expected a string');
 	}
 
-	const lcidCode = inverted[localeId];
+	const lcidCode = inverted[localeId.toLowerCase()];
 	if (lcidCode) {
-		return Number(inverted[localeId]);
+		return Number(lcidCode);
 	}
 };
 
